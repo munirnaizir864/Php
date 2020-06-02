@@ -8,7 +8,7 @@
 ?>
 
     <div class="contenedor-formulario">
-        <h1>UpTask</h1>
+        <h1>Ingresa a tu Cuenta</h1>
         <form id="formulario" class="caja-login" method="post">
             <div class="campo">
                 <label for="usuario">Usuario: </label>

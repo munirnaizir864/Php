@@ -8,10 +8,10 @@ $id_tarea = (int) $_POST['id'];
 
 
 if($accion === 'crear') {
-    // importar la conexion
+   
     include '../funciones/conexion.php';
     try {
-        // Realizar la consulta a la base de datos
+        
         $stmt = $conn->prepare("INSERT INTO tareas (nombre, id_proyecto) VALUES (?, ?) ");
         $stmt->bind_param('si', $tarea, $id_proyecto);
         $stmt->execute();
@@ -30,7 +30,7 @@ if($accion === 'crear') {
         $stmt->close();
         $conn->close();
     } catch(Exception $e) {
-        // En caso de un error, tomar la exepcion
+       
         $respuesta = array(
             'error' => $e->getMessage()
         );
@@ -41,10 +41,10 @@ if($accion === 'crear') {
 
 
 if($accion === 'actualizar') {
-    // importar la conexion
+
     include '../funciones/conexion.php';
     try {
-        // Realizar la consulta a la base de datos
+       
         $stmt = $conn->prepare("UPDATE tareas set estado = ? WHERE id = ? ");
         $stmt->bind_param('ii', $estado, $id_tarea);
         $stmt->execute();
@@ -60,7 +60,7 @@ if($accion === 'actualizar') {
         $stmt->close();
         $conn->close();
     } catch(Exception $e) {
-        // En caso de un error, tomar la exepcion
+        
         $respuesta = array(
             'error' => $e->getMessage()
         );
@@ -72,10 +72,10 @@ if($accion === 'actualizar') {
 
 
 if($accion === 'eliminar') {
-    // importar la conexion
+    
     include '../funciones/conexion.php';
     try {
-        // Realizar la consulta a la base de datos
+        
         $stmt = $conn->prepare("DELETE from tareas WHERE id = ? ");
         $stmt->bind_param('i', $id_tarea);
         $stmt->execute();
@@ -91,7 +91,7 @@ if($accion === 'eliminar') {
         $stmt->close();
         $conn->close();
     } catch(Exception $e) {
-        // En caso de un error, tomar la exepcion
+        
         $respuesta = array(
             'error' => $e->getMessage()
         );

@@ -4,11 +4,11 @@ $accion = $_POST['accion'];
 $proyecto = $_POST['proyecto'];
 
 if($accion === 'crear') {
-    // importar la conexion
+    
     include '../funciones/conexion.php';
     
     try {
-        // Realizar la consulta a la base de datos
+        
         $stmt = $conn->prepare("INSERT INTO proyectos (nombre) VALUES (?) ");
         $stmt->bind_param('s', $proyecto);
         $stmt->execute();
@@ -27,7 +27,7 @@ if($accion === 'crear') {
         $stmt->close();
         $conn->close();
     } catch(Exception $e) {
-        // En caso de un error, tomar la exepcion
+        
         $respuesta = array(
             'error' => $e->getMessage()
         );

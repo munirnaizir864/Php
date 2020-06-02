@@ -67,7 +67,7 @@ body {
    justify-content: flex-end;
 }
 .boton {
-    background-color: #FDD835;
+    background-color: #2ebac7;
     text-align: center;
     transition: background-color .5s ease-in-out;
     display: block;
@@ -79,7 +79,7 @@ body {
 }
 .boton:hover {
     cursor: pointer;
-    background-color: rgb(219, 184, 29)!important;
+    background-color: #2ebac7(219, 184, 29)!important;
 }
 .campo a {
     color: black;
@@ -125,7 +125,7 @@ body.index {
     text-decoration: none;
 }
 .panel h2 {
-    color: #FDD835;
+    color: #2ebac7;
     font-weight: 900;
     text-align: center;
     font-size: 2rem;

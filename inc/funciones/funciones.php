@@ -1,14 +1,14 @@
 <?php 
-// Obtiene la página actual que se ejecuta
+
 function obtenerPaginaActual() {
     $archivo = basename($_SERVER['PHP_SELF']);
     $pagina = str_replace(".php", "", $archivo);
     return $pagina;
 }
 
-/* Consultas **/
 
-/* Obtener todos los proyectos */
+
+
 function obtenerProyectos() {
     include 'conexion.php';
     try {
@@ -19,7 +19,7 @@ function obtenerProyectos() {
     }
 }
 
-// Obtener el nombre del Proyecto
+
 function obtenerNombreProyecto($id = null) {
     include 'conexion.php';
     try {
@@ -30,7 +30,7 @@ function obtenerNombreProyecto($id = null) {
     }
 }
 
-// Obtener las clases del Proyecto 
+ 
 function obtenerTareasProyecto($id = null) {
     include 'conexion.php';
     try {

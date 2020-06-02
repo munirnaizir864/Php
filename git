@@ -1,0 +1,21 @@
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   crear-cuenta.php
+	modified:   css/style.css
+	modified:   inc/funciones/funciones.php
+	modified:   inc/modelos/modelo-admin.php
+	modified:   inc/modelos/modelo-proyecto.php
+	modified:   inc/modelos/modelo-tareas.php
+	modified:   inc/templates/barra.php
+	modified:   index.php
+	modified:   js/formulario.js
+	modified:   js/scripts.js
+	modified:   login.php
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	git
+
+no changes added to commit (use "git add" and/or "git commit -a")

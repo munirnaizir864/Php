@@ -4,7 +4,7 @@
     include 'inc/templates/header.php';
     include 'inc/templates/barra.php';
     
-    // Obtener el ID de la URL
+    
     if(isset($_GET['id_proyecto'])) {
         $id_proyecto = $_GET['id_proyecto'];
     }
@@ -42,7 +42,7 @@
         
         <?php
             else:
-                // Si no hay proyectos seleccionados
+                
                 echo "<p>Selecciona un Proyecto a la izquierda</p>";
             endif;
         
@@ -54,10 +54,10 @@
         <div class="listado-pendientes">
             <ul>
                 <?php 
-                    // obtiene las tareas del proyecto actual
+                    
                     $tareas = obtenerTareasProyecto($id_proyecto);
                     if($tareas->num_rows > 0) {
-                        // si hay tareas
+                      
                         foreach($tareas as $tarea): ?>
                             <li id="tarea:<?php echo $tarea['id'] ?>" class="tarea">
                             <p><?php echo $tarea['nombre'] ?></p>
@@ -69,7 +69,7 @@
                             
                     <?php endforeach;
                     }  else {
-                        // no hay tareas
+                        
                         echo "<p class='lista-vacia'>No hay tareas en este proyecto</p>";
                     }
                 ?>
@@ -77,7 +77,7 @@
             </ul>
         </div>
     </main>
-</div><!--.contenedor-->
+</div>
 
 <?php
     include 'inc/templates/footer.php';
